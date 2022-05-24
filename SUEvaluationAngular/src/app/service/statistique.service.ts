@@ -25,4 +25,11 @@ export class StatistiqueService {
     }
   ]
   constructor() { }
+
+  supprimerStatistique(statistique : Statistique) {
+    let positionStatistique = this.statistiques.indexOf(statistique);
+    if (positionStatistique != -1) {
+      this.statistiques.splice(positionStatistique, 1);
+    }
+  }
 }

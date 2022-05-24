@@ -1,6 +1,9 @@
 <ng-container *ngFor="let s of statistiqueService.statistiques">
     <h3>statistiques : </h3>
-    <app-statistique [statistique]="s"></app-statistique>
+    <app-statistique 
+    [statistique]="s"
+    (suppression)="statistiqueService.supprimerStatistique(s)">
+</app-statistique>
 </ng-container>
 
 <router-outlet></router-outlet>
