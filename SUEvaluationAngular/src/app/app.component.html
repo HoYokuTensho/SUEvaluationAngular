@@ -1,6 +1,6 @@
-<h3>statistique 1 : </h3>
-<app-statistique [statistique]="statistique1"></app-statistique>
-   
-<h3>statistique 2 : </h3>
-<app-statistique [statistique]="statistique2"></app-statistique>
+<ng-container *ngFor="let s of statistiques">
+    <h3>statistiques : </h3>
+    <app-statistique [statistique]="s"></app-statistique>
+</ng-container>
+
 <router-outlet></router-outlet>
